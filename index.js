@@ -33,8 +33,10 @@ function displayToUser(product){
   
    const list=document.createElement('li');
    list.innerHTML=`${product.price} - ${product.category} - ${product.name}`
+   list.className='my-2'
    const deleteBtn = document.createElement("button");
   deleteBtn.appendChild(document.createTextNode("Delete"));
+  deleteBtn.className='btn btn-danger mx-2'
   list.appendChild(deleteBtn);
    if(product.category==='electronics'){
     document.getElementById("electronics").appendChild(list)
